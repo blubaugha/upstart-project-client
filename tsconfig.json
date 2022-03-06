@@ -16,13 +16,14 @@
     "target": "es2015",
     "module": "es2020",
     "paths": {
-      "shared-lib": [
-        "dist/shared-lib/shared-lib",
-        "dist/shared-lib"
+      "@upstart/user/*": [
+        "projects/user/src/app/*"
       ],
-      "vendors": [
-        "dist/vendors/vendors",
-        "dist/vendors"
+      "@upstart/admin/*": [
+        "projects/admin/src/app/*"
+      ],
+      "@upstart/shared-lib": [
+        "projects/shared-lib/src/public-api"
       ]
     }
   },

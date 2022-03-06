@@ -1,0 +1,44 @@
+$mat-button-border-radius: 2px !default;
+
+// Wrap in selector to ensure higher specificity for overrides
+body {
+  background-color: mat-color($mat-light-theme-background, background);
+
+  .theme-alternate & {
+    background-color: mat-color($mat-dark-theme-background, background);
+  }
+
+  // Handle buttons appropriately, with respect to line-height
+  .mat-raised-button, .mat-stroked-button, .mat-flat-button {
+    padding: 0 1.15em;
+    margin: 0 .65em;
+    min-width: 3em;
+    line-height: 36.4px
+  }
+
+  .mat-standard-chip {
+    padding: .5em .85em;
+    min-height: 2.5em;
+  }
+
+  .material-icons {
+    font-size: 24px;
+    font-family: 'Material Icons', 'Material Icons';
+
+    .mat-badge-content {
+      font-family: 'Roboto';
+    }
+  }
+
+  .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
+    border-radius: $mat-button-border-radius;
+
+    &:hover {
+      background-color: mat-color($mat-primary, darker);
+
+      .theme-alternate & {
+        background-color: mat-color($mat-primary, lighter);
+      }
+    }
+  }
+}

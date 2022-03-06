@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
+import { VendorsModule } from './vendors.module';
 
 
 
 @NgModule({
   declarations: [],
   imports: [
+    VendorsModule
   ],
-  exports: []
+  exports: [
+    VendorsModule
+  ]
 })
 export class SharedLibModule { }
