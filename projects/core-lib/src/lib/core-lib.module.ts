@@ -10,6 +10,12 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RootComponent } from './components/root/root.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { SvgIconResolverService } from './services/svg-icon-resolver/svg-icon-resolver.service';
+import { SVG_ICON_RESOLVER_CONFIG, SvgIconResolverConfig } from './services/svg-icon-resolver/svg-icon-resolver-config';
+
+const svgResolverConfig: SvgIconResolverConfig = {
+  baseUrl: 'assets/svg'
+};
 
 const components = [
   RootComponent,
@@ -31,6 +37,9 @@ const angularMaterialModules = [
   declarations: [
     ...components
   ],
+  providers: [{
+    provide: SVG_ICON_RESOLVER_CONFIG, useValue: svgResolverConfig
+  }],
   imports: [
     HttpClientModule,
     ...angularMaterialModules
@@ -41,4 +50,6 @@ const angularMaterialModules = [
   ]
 })
 export class CoreLibModule {
+  constructor(private dynamicSvgResolverService: SvgIconResolverService) {
+  }
 }
