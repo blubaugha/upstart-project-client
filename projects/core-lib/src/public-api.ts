@@ -3,8 +3,8 @@
  */
 
 export * from './lib/core-lib.module';
-export * from './lib/components/root/root.component';
+export * from './lib/components/app/app.component';
+export * from './lib/components/app-header/app-header.component';
+export * from './lib/components/app-footer/app-footer.component';
 export * from './lib/components/navbar/navbar.component';
 export * from './lib/components/logo/logo.component';
-export * from './lib/components/main-header/main-header.component';
-export * from './lib/components/main-footer/main-footer.component';

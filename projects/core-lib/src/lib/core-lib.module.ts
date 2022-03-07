@@ -5,10 +5,10 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { MainFooterComponent } from './components/main-footer/main-footer.component';
-import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { AppFooterComponent } from './components/app-footer/app-footer.component';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RootComponent } from './components/root/root.component';
+import { AppComponent } from './components/app/app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SvgIconResolverService } from './services/svg-icon-resolver/svg-icon-resolver.service';
 import { SVG_ICON_RESOLVER_CONFIG, SvgIconResolverConfig } from './services/svg-icon-resolver/svg-icon-resolver-config';
@@ -18,11 +18,11 @@ const svgResolverConfig: SvgIconResolverConfig = {
 };
 
 const components = [
-  RootComponent,
+  AppComponent,
   NavbarComponent,
   LogoComponent,
-  MainHeaderComponent,
-  MainFooterComponent
+  AppHeaderComponent,
+  AppFooterComponent
 ];
 
 const angularMaterialModules = [
