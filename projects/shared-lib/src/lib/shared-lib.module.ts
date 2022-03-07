@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { VendorsModule } from './vendors.module';
 import { RootComponent } from './components/root/root.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MainToolbarComponent } from './components/main-toolbar/main-toolbar.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 const components = [
   RootComponent,
-  ToolbarComponent
+  MainToolbarComponent,
+  MainMenuComponent
 ];
 
 @NgModule({
   declarations: [
     ...components,
-    ToolbarComponent
+    MainToolbarComponent
   ],
   imports: [
     VendorsModule
