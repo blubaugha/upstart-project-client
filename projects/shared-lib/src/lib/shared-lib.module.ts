@@ -1,21 +1,26 @@
 import { NgModule } from '@angular/core';
 import { VendorsModule } from './vendors.module';
 import { RootComponent } from './components/root/root.component';
-import { MainToolbarComponent } from './components/main-toolbar/main-toolbar.component';
-import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { MainFooterComponent } from './components/main-footer/main-footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const components = [
   RootComponent,
-  MainToolbarComponent,
-  MainMenuComponent
+  NavbarComponent,
+  LogoComponent,
+  MainHeaderComponent,
+  MainFooterComponent
 ];
 
 @NgModule({
   declarations: [
-    ...components,
-    MainToolbarComponent
+    ...components
   ],
   imports: [
+    HttpClientModule,
     VendorsModule
   ],
   exports: [
