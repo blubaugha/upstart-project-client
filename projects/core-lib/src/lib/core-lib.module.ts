@@ -50,6 +50,6 @@ const angularMaterialModules = [
   ]
 })
 export class CoreLibModule {
-  constructor(private dynamicSvgResolverService: SvgIconResolverService) {
+  constructor(private svgIconResolverService: SvgIconResolverService) {
   }
 }
