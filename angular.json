@@ -29,10 +29,15 @@
               "projects/user/src/assets",
               {
                 "glob": "**/*",
-                "input": "assets",
+                "input": "projects/assets-lib/src/assets",
                 "output": "assets"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/styles-lib/src/styles"
+              ]
+            },
             "styles": [
               "projects/user/src/styles.scss"
             ],
@@ -161,10 +166,15 @@
               "projects/admin/src/assets",
               {
                 "glob": "**/*",
-                "input": "assets",
+                "input": "projects/assets-lib/src/assets",
                 "output": "assets"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/styles-lib/src/styles"
+              ]
+            },
             "styles": [
               "projects/admin/src/styles.scss"
             ],
@@ -267,44 +277,118 @@
         }
       }
     },
-    "shared-lib": {
+    "assets-lib": {
       "projectType": "library",
-      "schematics": {
-        "@schematics/angular:component": {
-          "module": "shared-lib",
-          "style": "scss"
-        }
-      },
-      "root": "projects/shared-lib",
-      "sourceRoot": "projects/shared-lib/src",
-      "prefix": "upstart",
+      "root": "projects/assets-lib",
+      "sourceRoot": "projects/assets-lib/src",
+      "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/shared-lib/tsconfig.lib.json",
-            "project": "projects/shared-lib/ng-package.json"
+            "tsConfig": "projects/assets-lib/tsconfig.lib.json",
+            "project": "projects/assets-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/shared-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/assets-lib/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/shared-lib/src/test.ts",
-            "tsConfig": "projects/shared-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/shared-lib/karma.conf.js"
+            "main": "projects/assets-lib/src/test.ts",
+            "tsConfig": "projects/assets-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/assets-lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/shared-lib/tsconfig.lib.json",
-              "projects/shared-lib/tsconfig.spec.json"
+              "projects/assets-lib/tsconfig.lib.json",
+              "projects/assets-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "styles-lib": {
+      "projectType": "library",
+      "root": "projects/styles-lib",
+      "sourceRoot": "projects/styles-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/styles-lib/tsconfig.lib.json",
+            "project": "projects/styles-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/styles-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/styles-lib/src/test.ts",
+            "tsConfig": "projects/styles-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/styles-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/styles-lib/tsconfig.lib.json",
+              "projects/styles-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "core-lib": {
+      "projectType": "library",
+      "root": "projects/core-lib",
+      "sourceRoot": "projects/core-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/core-lib/tsconfig.lib.json",
+            "project": "projects/core-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/core-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/core-lib/src/test.ts",
+            "tsConfig": "projects/core-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/core-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/core-lib/tsconfig.lib.json",
+              "projects/core-lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -314,5 +398,5 @@
       }
     }
   },
-  "defaultProject": "shared-lib"
+  "defaultProject": "core-lib"
 }

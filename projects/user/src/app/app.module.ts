@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from '@upstart/user/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedLibModule } from '@upstart/shared-lib';
+import { CoreLibModule } from '@upstart/core-lib';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { SharedLibModule } from '@upstart/shared-lib';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedLibModule
+    CoreLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

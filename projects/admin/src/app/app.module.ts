@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VendorsModule } from '../../../shared-lib/src/lib/vendors.module';
+import { CoreLibModule } from '@upstart/core-lib';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { VendorsModule } from '../../../shared-lib/src/lib/vendors.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    VendorsModule
+    CoreLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

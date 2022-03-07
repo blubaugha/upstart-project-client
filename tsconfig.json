@@ -22,8 +22,14 @@
       "@upstart/admin/*": [
         "projects/admin/src/app/*"
       ],
-      "@upstart/shared-lib": [
-        "projects/shared-lib/src/public-api"
+      "@upstart/core-lib": [
+        "projects/core-lib/src/public-api"
+      ],
+      "@upstart/assets-lib/*": [
+        "projects/assets-lib/src/assets/*"
+      ],
+      "@upstart/styles-lib/*": [
+        "projects/styles-lib/src/styles/*"
       ]
     }
   },
