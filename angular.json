@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/user",
-            "baseHref": "user",
+            //            "baseHref": "user",
             "index": "projects/user/src/index.html",
             "main": "projects/user/src/main.ts",
             "polyfills": "projects/user/src/polyfills.ts",
@@ -35,7 +35,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "projects/styles-lib/src/styles"
+                "projects/styles-lib/src/styles",
+                "projects/core-lib/src/lib"
               ]
             },
             "styles": [
@@ -155,7 +156,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/admin",
-            "baseHref": "admin",
+            //            "baseHref": "admin",
             "index": "projects/admin/src/index.html",
             "main": "projects/admin/src/main.ts",
             "polyfills": "projects/admin/src/polyfills.ts",
@@ -172,7 +173,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "projects/styles-lib/src/styles"
+                "projects/styles-lib/src/styles",
+                "projects/core-lib/src/lib"
               ]
             },
             "styles": [
@@ -240,7 +242,7 @@
               "projects/admin/src/assets",
               {
                 "glob": "**/*",
-                "input": "assets",
+                "input": "projects/assets-lib/src/assets",
                 "output": "assets"
               }
             ],
@@ -359,9 +361,14 @@
     },
     "core-lib": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/core-lib",
       "sourceRoot": "projects/core-lib/src",
-      "prefix": "lib",
+      "prefix": "upstart",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

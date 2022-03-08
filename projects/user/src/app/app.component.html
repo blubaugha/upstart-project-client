@@ -1,6 +1,16 @@
 <upstart-app>
-  <upstart-app-header upstart-header>
-    <mat-icon svgIcon="upstart-logo" inline="true" upstart-logo></mat-icon>
-  </upstart-app-header>
-  <router-outlet></router-outlet>
+  <upstart-app-sidenav>
+    <upstart-app-header upstart-header>
+      <a routerLink="/" mat-button upstart-logo>
+        <mat-icon svgIcon="upstart-logo" inline="true"></mat-icon>
+      </a>
+      <div upstart-actions>
+        <a href>Login</a>
+      </div>
+    </upstart-app-header>
+    <router-outlet></router-outlet>
+    <upstart-app-footer upstart-footer>
+      Footer
+    </upstart-app-footer>
+  </upstart-app-sidenav>
 </upstart-app>

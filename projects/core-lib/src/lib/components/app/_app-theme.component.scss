@@ -1,0 +1,10 @@
+@import '@angular/material/theming';
+
+@mixin app-theme($theme) {
+  $color-config: mat-get-color-config($theme);
+  $background-config: map-get($color-config, background);
+
+  upstart-app {
+    background-color: mat-color($background-config, background);
+  }
+}

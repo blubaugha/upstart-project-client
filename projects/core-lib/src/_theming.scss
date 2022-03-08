@@ -1,0 +1,7 @@
+@import 'components/app/app-theme.component';
+@import 'components/app-sidenav/app-sidenav-theme.component';
+
+@mixin core-lib-theme($theme) {
+  @include app-theme($theme);
+  @include app-sidenav-theme($theme);
+}
