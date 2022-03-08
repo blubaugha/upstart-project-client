@@ -9,7 +9,6 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppComponent } from './components/app/app.component';
-import { LogoComponent } from './components/logo/logo.component';
 import { SvgIconResolverService } from './services/svg-icon-resolver/svg-icon-resolver.service';
 import { SVG_ICON_RESOLVER_CONFIG, SvgIconResolverConfig } from './services/svg-icon-resolver/svg-icon-resolver-config';
 
@@ -20,7 +19,6 @@ const svgResolverConfig: SvgIconResolverConfig = {
 const components = [
   AppComponent,
   NavbarComponent,
-  LogoComponent,
   AppHeaderComponent,
   AppFooterComponent
 ];
