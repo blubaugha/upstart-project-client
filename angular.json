@@ -104,7 +104,7 @@
               "projects/user/src/assets",
               {
                 "glob": "**/*",
-                "input": "assets",
+                "input": "projects/assets-lib/src/assets",
                 "output": "assets"
               }
             ],
