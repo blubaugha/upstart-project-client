@@ -6,6 +6,6 @@
   },
   "assets": [
     "README.md",
-    "src/_public-theme.scss"
+    "src/**/_*.scss"
   ]
 }

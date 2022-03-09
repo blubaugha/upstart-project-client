@@ -17,6 +17,6 @@
 // https://materialtheme.arcsine.dev/?c=YHBhbGV0dGU$YHByaW1hcnk$YF48IzAwODA3YSIsIj9lcjwjMDFiMGFjIiwiO2VyPCMwMDYzNWR$LCIlPmBePCMwMDgwN2EiLCI~ZXI8IzAxYjBhYyIsIjtlcjwjMDA2MzVkfiwid2Fybj5gXjwjYjAwMDIwIiwiP2VyPCNlZGMwYzMiLCI7ZXI8IzkxMDAxMn4sIj9UZXh0PCMyMTI5MjkiLCI~PTwjZmZmZmZmIiwiO1RleHQ8I2ZmZmZmZiIsIjs9PCMyMTI5Mjl$LCJmb250cz5bYEA8KC00IiwidmFyaWFudDxtZWRpdW1$LGBAPCgtMyIsInZhcmlhbnQ8bWVkaXVtfixgQDwoLTIiLCJ2YXJpYW50PG1lZGl1bX4sYEA8KC0xIiwidmFyaWFudDxtZWRpdW1$LGBAPGhlYWRsaW5lIiwidmFyaWFudDxtZWRpdW1$LGBAPHRpdGxlfixgQDxzdWIpLTIiLCJ2YXJpYW50PG1lZGl1bX4sYEA8c3ViKS0xfixgQDxib2R5LTJ$LGBAPGJvZHktMSIsInZhcmlhbnQ8bWVkaXVtfixgQDxidXR0b25$LGBAPGNhcHRpb24iLCJ2YXJpYW50PG1lZGl1bX4sYEA8aW5wdXQiLCJ2YXJpYW50PG1lZGl1bSIsInNpemU$bnVsbH1dLCJpY29uczxGaWxsZWQiLCI~bmVzcz50cnVlLCJ2ZXJzaW9uPjExfQ==
 // -----------------------------------------------
 
-@import 'angular-material';
-@import '../angular-material-overrides';
-@import '../core-lib';
+@import './angular-material';
+@import 'src/styles/shared/angular-material-overrides';
+@import 'src/styles/shared/core-lib';
