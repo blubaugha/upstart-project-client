@@ -6,16 +6,14 @@
   $foreground-config: map-get($color-config, foreground);
   $background-config: map-get($color-config, background);
 
-  .sidenav-container {
-    background-color: transparent;
-  }
+  upstart-app-sidenav {
+    .sidenav-container {
+      background-color: transparent;
+    }
 
-  .mat-toolbar {
-    //background-color: mat-color($background-config, background);
-    border-bottom-color: mat-color($foreground-config, divider);
-
-    .theme-alternate & {
-      //background-color: mat-color($primary-palette, darker);
+    .mat-toolbar {
+      //background-color: mat-color($background-config, background);
+      border-color: mat-color($foreground-config, divider);
     }
   }
 }

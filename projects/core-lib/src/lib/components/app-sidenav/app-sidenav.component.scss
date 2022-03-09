@@ -1,23 +1,44 @@
+$sidenav-width: 200px;
+$toolbar-border-width: 1px;
+
 .sidenav-container {
   height: 100%;
 }
 
 .sidenav {
-  width: 200px;
+  width: $sidenav-width;
 }
 
 .sidenav .mat-toolbar {
   background: inherit;
 }
 
+.mat-sidenav-content {
+  display: grid;
+  grid-template-areas:  'header'
+                        'content'
+                        'footer';
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
 .mat-toolbar {
   position: sticky;
   top: 0;
   z-index: 1;
-  border-bottom-width: 1px;
+  border-bottom-width: $toolbar-border-width;
   border-bottom-style: solid;
 }
 
 .header {
+  grid-area: header;
   width: 100%;
+}
+
+.content {
+  grid-area: content;
+  overflow: auto;
+}
+
+.footer {
+  grid-area: footer;
 }

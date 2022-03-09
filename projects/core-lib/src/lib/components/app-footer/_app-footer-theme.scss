@@ -1,0 +1,16 @@
+@import '@angular/material/theming';
+
+@mixin app-footer-theme($theme) {
+  $color-config: mat-get-color-config($theme);
+  $background-config: map-get($color-config, background);
+  $foreground-config: map-get($color-config, foreground);
+  $typography-config: mat-get-typography-config($theme);
+  $caption-config: map-get($typography-config, caption);
+
+  upstart-app-footer {
+    font-size: map-get($caption-config, font-size);
+    color: mat-color($foreground-config, secondary-text);
+    background-color: mat-color($background-config, app-bar);
+    border-color: mat-color($foreground-config, divider);
+  }
+}

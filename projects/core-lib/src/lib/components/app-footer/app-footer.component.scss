@@ -1,0 +1,23 @@
+$border-width: 1px;
+$padding-horizontal: 16px;
+$padding-vertical: 4px;
+$info-image-height: 32px;
+
+:host {
+  display: flex;
+  column-gap: $padding-horizontal / 2;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  border-top-width: $border-width;
+  border-top-style: solid;
+  padding: $padding-vertical $padding-horizontal;
+}
+
+p {
+  margin: 0;
+}
+
+.info-image {
+  height: $info-image-height;
+}

@@ -1,3 +1,12 @@
 @import '~projects/core-lib/src/theming';
 
+$theme: () !default;
+$fontConfig: () !default;
+
+@if not map-get($theme, typography) {
+  $theme: map-merge($theme, (
+    typography: $fontConfig
+  ));
+}
+
 @include core-lib-theme($theme);
