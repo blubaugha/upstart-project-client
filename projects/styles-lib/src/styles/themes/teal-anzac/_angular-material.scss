@@ -36,7 +36,7 @@ $dark-text: #212929;
 $dark-primary-text: rgba($dark-text, 0.87);
 $dark-accent-text: rgba($dark-primary-text, 0.54);
 $dark-disabled-text: rgba($dark-primary-text, 0.38);
-$dark-dividers: rgba($dark-primary-text, 0.12);
+$dark-dividers: #D7DDDC;//rgba($dark-primary-text, 0.12);
 $dark-focused: rgba($dark-primary-text, 0.12);
 
 $mat-light-theme-foreground: (
@@ -87,8 +87,8 @@ $mat-dark-theme-foreground: (
 
 // Background config
 // Light bg
-$light-background:    #ffffff;
-$light-bg-darker-5:   darken($light-background, 5%);
+$light-background: #ffffff;
+$light-bg-darker-5:   #F3F8F8;//darken($light-background, 5%);
 $light-bg-darker-10:  darken($light-background, 10%);
 $light-bg-darker-20:  darken($light-background, 20%);
 $light-bg-darker-30:  darken($light-background, 30%);

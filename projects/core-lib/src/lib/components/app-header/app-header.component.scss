@@ -1,14 +1,17 @@
+$logo-width: 200px;
+
 :host {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
 }
 
 .logo {
   display: flex;
   align-content: center;
-  width: 175px;
+  width: $logo-width;
 }
 
 .navbar {

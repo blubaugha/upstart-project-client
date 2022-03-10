@@ -7,7 +7,7 @@ $info-image-height: 32px;
 
 :host {
   display: flex;
-  column-gap: math.div($padding-horizontal, 2);
+  column-gap: $padding-horizontal / 2;
   align-content: center;
   align-items: center;
   width: 100%;
