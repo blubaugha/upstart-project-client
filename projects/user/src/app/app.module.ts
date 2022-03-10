@@ -4,7 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from '@upstart/user/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreLibModule } from '@upstart/core-lib';
-import { StylesLibModule } from '../../../styles-lib/src/lib/styles-lib.module';
+import { StylesLibModule } from '@upstart/styles-lib';
+import { AssetsLibModule } from '@upstart/assets-lib';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StylesLibModule } from '../../../styles-lib/src/lib/styles-lib.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreLibModule,
-    StylesLibModule
+    StylesLibModule,
+    AssetsLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
