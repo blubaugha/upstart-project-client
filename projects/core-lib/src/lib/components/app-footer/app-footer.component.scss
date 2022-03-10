@@ -7,10 +7,10 @@ $info-image-height: 32px;
 
 :host {
   display: flex;
+  justify-content: space-between;
   column-gap: $padding-horizontal / 2;
   align-content: center;
   align-items: center;
-  width: 100%;
   border-top-width: $border-width;
   border-top-style: solid;
   padding: $padding-vertical $padding-horizontal;
@@ -18,6 +18,13 @@ $info-image-height: 32px;
 
 p {
   margin: 0;
+}
+
+.copyright {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  column-gap: $padding-horizontal / 2;
 }
 
 .info-image {

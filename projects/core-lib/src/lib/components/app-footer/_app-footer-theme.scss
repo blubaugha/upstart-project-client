@@ -10,7 +10,7 @@
   upstart-app-footer {
     font-size: map-get($caption-config, font-size);
     color: mat-color($foreground-config, secondary-text);
-    background-color: mat-color($background-config, app-bar);
+    background-color: mat-color($background-config, status-bar);
     border-color: mat-color($foreground-config, divider);
   }
 }
