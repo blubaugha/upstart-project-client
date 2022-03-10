@@ -9,16 +9,17 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppComponent } from './components/app/app.component';
-import { SvgIconResolverService } from './services/svg-icon-resolver/svg-icon-resolver.service';
-import { SVG_ICON_RESOLVER_CONFIG, SvgIconResolverConfig } from './services/svg-icon-resolver/svg-icon-resolver-config';
+import { SvgIconResolverService } from './services/svg-icon-resolver.service';
+import { SVG_ICON_RESOLVER_CONFIG, SvgIconResolverConfig } from './services/svg-icon-resolver-config';
 import { AppSidenavComponent } from './components/app-sidenav/app-sidenav.component';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
 
 const svgResolverConfig: SvgIconResolverConfig = {
-  baseUrl: 'assets/svg'
+  baseUrl: 'assets/images'
 };
 
 const components = [
@@ -50,8 +51,8 @@ const angularMaterialModules = [
   imports: [
     CommonModule,
     HttpClientModule,
-    ...angularMaterialModules,
-    MatListModule
+    RouterModule,
+    ...angularMaterialModules
   ],
   exports: [
     ...angularMaterialModules,

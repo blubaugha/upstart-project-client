@@ -1,7 +1,9 @@
-<div class="logo">
-  <ng-content select="[upstart-logo]"></ng-content>
-</div>
-<div class="spacer"></div>
+<a routerLink="" class="logo" mat-button>
+  <mat-icon svgIcon="upstart-logo" inline="true"></mat-icon>
+</a>
 <div class="actions">
-  <ng-content select="[upstart-actions]"></ng-content>
+  <a routerLink="login" mat-flat-button>
+    <mat-icon>account_circle</mat-icon>
+    Login
+  </a>
 </div>

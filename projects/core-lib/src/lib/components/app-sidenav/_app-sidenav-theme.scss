@@ -2,18 +2,28 @@
 
 @mixin app-sidenav-theme($theme) {
   $color-config: mat-get-color-config($theme);
-  $primary-palette: map-get($color-config, primary);
   $foreground-config: map-get($color-config, foreground);
   $background-config: map-get($color-config, background);
+  $typography-config: mat-get-typography-config($theme);
+  $caption-config: map-get($typography-config, caption);
 
   upstart-app-sidenav {
     .sidenav-container {
       background-color: transparent;
     }
 
+    .sidenav .mat-toolbar {
+      background-color: mat-color($background-config, app-bar);
+    }
+
     .mat-toolbar {
-      //background-color: mat-color($background-config, background);
       border-color: mat-color($foreground-config, divider);
+    }
+
+    .caption {
+      color: mat-color($foreground-config, secondary-text);
+      font-size: map-get($caption-config, font-size);
+      line-height: map-get($caption-config, line-height);
     }
   }
 }
