@@ -90,7 +90,7 @@ $mat-dark-theme-foreground: (
 $light-background: #ffffff;
 $light-bg-darker-5:   #F3F8F8;//darken($light-background, 5%);
 $light-bg-darker-10:  darken($light-background, 10%);
-$light-bg-darker-20:  darken($light-background, 20%);
+$light-bg-darker-20:  #F3F8F8;//darken($light-background, 20%);
 $light-bg-darker-30:  darken($light-background, 30%);
 $light-bg-lighter-5:  #F3F8F8;//lighten($light-background, 5%);
 $dark-bg-tooltip:     lighten(#212929, 20%);
