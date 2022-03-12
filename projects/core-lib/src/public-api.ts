@@ -11,6 +11,7 @@ export * from './lib/components/app-sidenav/app-sidenav.component';
 export * from './lib/components/navbar/navbar.component';
 export * from './lib/components/loan-nav-link-list/loan-nav-link-list.component';
 export * from './lib/components/loan-nav-block-list/loan-nav-block-list.component';
+export * from './lib/components/popular-loans-card/popular-loans-card.component';
 
 export * from './lib/models/loan.model';
 

@@ -21,6 +21,7 @@ import { LoanNavLinkListComponent } from './components/loan-nav-link-list/loan-n
 import { LoanService } from './services/loan.service';
 import { LoanNavBlockListComponent } from './components/loan-nav-block-list/loan-nav-block-list.component';
 import { MatCardModule } from '@angular/material/card';
+import { PopularLoansCardComponent } from './components/popular-loans-card/popular-loans-card.component';
 
 const svgResolverConfig: SvgIconResolverConfig = {
   baseUrl: 'assets/images'
@@ -33,7 +34,8 @@ const components = [
   AppFooterComponent,
   AppSidenavComponent,
   LoanNavLinkListComponent,
-  LoanNavBlockListComponent
+  LoanNavBlockListComponent,
+  PopularLoansCardComponent
 ];
 
 const angularMaterialModules = [
