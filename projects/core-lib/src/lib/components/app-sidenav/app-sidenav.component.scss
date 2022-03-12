@@ -1,7 +1,6 @@
 $sidenav-width: 325px;
 $toolbar-border-width: 1px;
 $padding-horizontal: 16px;
-$sidenav-icon-size: 40px;
 
 .sidenav-container {
   height: 100%;
@@ -9,11 +8,6 @@ $sidenav-icon-size: 40px;
 
 .sidenav {
   width: $sidenav-width;
-
-  .mat-icon {
-    width: $sidenav-icon-size;
-    height: auto;
-  }
 }
 
 .sidenav-toolbar {

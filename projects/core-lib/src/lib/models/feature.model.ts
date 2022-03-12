@@ -1,5 +1,6 @@
 export interface Feature {
   id: string;
+  setId: string;
   name: string;
   description: string;
   image: string;

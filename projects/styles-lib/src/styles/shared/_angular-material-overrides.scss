@@ -6,12 +6,36 @@ $color-config: mat-get-color-config($theme);
 $primary-palette: map-get($color-config, primary);
 $background-config: map-get($color-config, background);
 
-$mat-button-border-radius: 2px;
-$mat-list-padding-horizontal: 16px;
+//$mat-list-padding-horizontal: 16px;
+
+$mat-icon-size-sm: 24px;
+$mat-icon-size-md: 32px;
+$mat-icon-size-lg: 64px;
+$mat-icon-size-xl: 96px;
 
 // Wrap in selector to ensure higher specificity for overrides
 body {
   .mat-icon {
+    &.sm {
+      height: $mat-icon-size-sm !important;
+      width: $mat-icon-size-sm !important;;
+    }
+
+    &.md {
+      height: $mat-icon-size-md !important;;
+      width: $mat-icon-size-md !important;;
+    }
+
+    &.lg {
+      height: $mat-icon-size-lg !important;;
+      width: $mat-icon-size-lg !important;;
+    }
+
+    &.xl {
+      height: $mat-icon-size-xl !important;;
+      width: $mat-icon-size-xl !important;;
+    }
+
     & > svg {
       // Fix extra white space caused by display inline by default for svg elements
       display: block;
@@ -62,8 +86,6 @@ body {
   }
 
   .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
-    border-radius: $mat-button-border-radius;
-
     &:hover:not(a) {
       background-color: mat-color($primary-palette, darker);
 
@@ -80,6 +102,18 @@ body {
 
     &[dense] .mat-list-item .mat-list-item-content {
       padding: 0;
+    }
+  }
+
+  .mat-card {
+    &.mat-card-link {
+      margin: 1px;
+
+      &:hover {
+        border: 1px solid mat-color($primary-palette, main);
+        margin: 0;
+        cursor: pointer;
+      }
     }
   }
 }

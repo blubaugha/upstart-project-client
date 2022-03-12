@@ -17,6 +17,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { FeatureNavLinkListComponent } from './components/feature-nav-link-list/feature-nav-link-list.component';
+import { FeatureService } from './services/feature.service';
+import { FeatureSetComponent } from './components/feature-set/feature-set.component';
+import { FeatureNavBlockListComponent } from './components/feature-nav-block-list/feature-nav-block-list.component';
+import { MatCardModule } from '@angular/material/card';
 
 const svgResolverConfig: SvgIconResolverConfig = {
   baseUrl: 'assets/images'
@@ -27,7 +32,10 @@ const components = [
   NavbarComponent,
   AppHeaderComponent,
   AppFooterComponent,
-  AppSidenavComponent
+  AppSidenavComponent,
+  FeatureSetComponent,
+  FeatureNavLinkListComponent,
+  FeatureNavBlockListComponent
 ];
 
 const angularMaterialModules = [
@@ -38,7 +46,8 @@ const angularMaterialModules = [
   MatIconModule,
   MatSidenavModule,
   MatToolbarModule,
-  MatListModule
+  MatListModule,
+  MatCardModule
 ];
 
 @NgModule({
@@ -60,6 +69,8 @@ const angularMaterialModules = [
   ]
 })
 export class CoreLibModule {
-  constructor(private svgIconResolverService: SvgIconResolverService) {
+  constructor(
+    private svgIconResolverService: SvgIconResolverService,
+    private featuresService: FeatureService) {
   }
 }

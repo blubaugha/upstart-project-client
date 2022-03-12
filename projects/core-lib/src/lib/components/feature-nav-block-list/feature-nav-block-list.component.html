@@ -1,0 +1,10 @@
+<mat-nav-list class="mat-list-inline feature-list">
+  <div class="feature" *ngFor="let feature of (features$ | async) as features">
+    <mat-card class="mat-card-link feature-card" [routerLink]="feature.path">
+      <mat-card-content mat-ripple class="feature-content">
+        <mat-icon class="lg" [svgIcon]="feature.image"></mat-icon>
+        <p class="feature-description">{{feature.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</mat-nav-list>
