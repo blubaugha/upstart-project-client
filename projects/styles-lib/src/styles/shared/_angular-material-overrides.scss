@@ -84,36 +84,4 @@ body {
       font-family: 'Roboto';
     }
   }
-
-  .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
-    &:hover:not(a) {
-      background-color: mat-color($primary-palette, darker);
-
-      .theme-alternate & {
-        background-color: mat-color($primary-palette, lighter);
-      }
-    }
-  }
-
-  .mat-list-base {
-    &.mat-list-inline {
-      display: flex;
-    }
-
-    &[dense] .mat-list-item .mat-list-item-content {
-      padding: 0;
-    }
-  }
-
-  .mat-card {
-    &.mat-card-link {
-      margin: 1px;
-
-      &:hover {
-        border: 1px solid mat-color($primary-palette, main);
-        margin: 0;
-        cursor: pointer;
-      }
-    }
-  }
 }
