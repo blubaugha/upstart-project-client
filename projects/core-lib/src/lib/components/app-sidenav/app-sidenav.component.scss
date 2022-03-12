@@ -38,6 +38,11 @@ $padding-horizontal: 16px;
 .content {
   grid-area: content;
   overflow: auto;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .footer {

@@ -1,3 +1,4 @@
+@import '~@angular/material/theming';
 @import '~projects/core-lib/src/theming';
 
 $theme: () !default;
@@ -10,38 +11,3 @@ $fontConfig: () !default;
 }
 
 @include core-lib-theme($theme);
-
-// Wrap in selector to ensure higher specificity for overrides
-body {
-  .mat-list-base {
-    &.mat-list-inline {
-      display: flex;
-    }
-
-    &[dense] .mat-list-item .mat-list-item-content {
-      padding: 0;
-    }
-  }
-
-  .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
-    &:hover:not(a) {
-      background-color: mat-color($primary-palette, darker);
-
-      .theme-alternate & {
-        background-color: mat-color($primary-palette, lighter);
-      }
-    }
-  }
-
-  .mat-card {
-    &.mat-card-link {
-      margin: 1px;
-
-      &:hover {
-        border: 1px solid mat-color($primary-palette, main);
-        margin: 0;
-        cursor: pointer;
-      }
-    }
-  }
-}

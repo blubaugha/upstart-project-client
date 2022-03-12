@@ -1,0 +1,41 @@
+$color-config: mat-get-color-config($theme);
+$background-config: map-get($color-config, background);
+
+// Wrap in selector to ensure higher specificity for overrides
+body {
+  .mat-list-base {
+    &.mat-list-inline {
+      display: flex;
+    }
+
+    &[dense] .mat-list-item .mat-list-item-content {
+      padding: 0;
+    }
+  }
+
+  .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
+    &:hover:not(a) {
+      background-color: mat-color($primary-palette, darker);
+
+      .theme-alternate & {
+        background-color: mat-color($primary-palette, lighter);
+      }
+    }
+  }
+
+  .mat-card {
+    &.mat-card-link {
+      margin: 1px;
+
+      &:hover {
+        border: 1px solid mat-color($primary-palette, main);
+        margin: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .opacity-50 {
+    background-color: mat-color($background-config, card, .5);
+  }
+}

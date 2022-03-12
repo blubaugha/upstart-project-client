@@ -1,9 +1,11 @@
 @import './lib/components/app/app-theme';
 @import './lib/components/app-sidenav/app-sidenav-theme';
 @import './lib/components/app-footer/app-footer-theme';
+@import './lib/components/popular-loans-card/popular-loans-card-theme';
 
 @mixin core-lib-theme($theme) {
   @include app-theme($theme);
   @include app-sidenav-theme($theme);
   @include app-footer-theme($theme);
+  @include popular-loans-card-theme($theme);
 }
