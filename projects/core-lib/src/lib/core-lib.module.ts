@@ -22,6 +22,11 @@ import { LoanService } from './services/loan.service';
 import { LoanNavBlockListComponent } from './components/loan-nav-block-list/loan-nav-block-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { PopularLoansCardComponent } from './components/popular-loans-card/popular-loans-card.component';
+import { loanRouteLoaderProvider } from './providers/loan-route-loader.provider';
+import { ConsolidateDebtComponent } from './components/consolidate-debt/consolidate-debt.component';
+import { PayOffCreditCardsComponent } from './components/pay-off-credit-cards/pay-off-credit-cards.component';
+import { AutoRefinanceComponent } from './components/auto-refinance/auto-refinance.component';
+import { OtherLoanComponent } from './components/other-loan/other-loan.component';
 
 const svgResolverConfig: SvgIconResolverConfig = {
   baseUrl: 'assets/images'
@@ -35,7 +40,11 @@ const components = [
   AppSidenavComponent,
   LoanNavLinkListComponent,
   LoanNavBlockListComponent,
-  PopularLoansCardComponent
+  PopularLoansCardComponent,
+  ConsolidateDebtComponent,
+  PayOffCreditCardsComponent,
+  AutoRefinanceComponent,
+  OtherLoanComponent
 ];
 
 const angularMaterialModules = [
@@ -56,7 +65,7 @@ const angularMaterialModules = [
   ],
   providers: [{
     provide: SVG_ICON_RESOLVER_CONFIG, useValue: svgResolverConfig
-  }],
+  }, loanRouteLoaderProvider],
   imports: [
     CommonModule,
     HttpClientModule,

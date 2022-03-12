@@ -1,10 +1,10 @@
-<mat-nav-list class="mat-list-inline loan-list">
-  <div class="loan" *ngFor="let loan of (loans$ | async) as features">
-    <mat-card class="mat-card-link loan-card" [routerLink]="loan.path">
+<mat-nav-list class="loan-list">
+  <a class="loan" [routerLink]="loan.path" *ngFor="let loan of (loans$ | async) as features">
+    <mat-card class="mat-card-link loan-card">
       <mat-card-content mat-ripple class="loan-content">
         <mat-icon class="lg" [svgIcon]="loan.image"></mat-icon>
         <p class="loan-description">{{loan.description}}</p>
       </mat-card-content>
     </mat-card>
-  </div>
+  </a>
 </mat-nav-list>

@@ -13,7 +13,7 @@ export class LoanService extends AbstractBaseService {
       name: 'Credit Card Consolidation',
       description: 'Pay off credit cards',
       image: 'credit-cards',
-      path: 'consolidate-credit-cards',
+      path: 'pay-off-credit-cards',
       created: new Date(),
       lastModified: new Date()
     }, {
@@ -28,7 +28,7 @@ export class LoanService extends AbstractBaseService {
       id: '3',
       name: 'Auto Refinance',
       description: 'Refinance my car',
-      path: 'refinance-auto',
+      path: 'auto-refinance',
       image: 'auto-refinance',
       created: new Date(),
       lastModified: new Date()
@@ -36,7 +36,7 @@ export class LoanService extends AbstractBaseService {
       id: '4',
       name: 'Other',
       description: 'Other',
-      path: 'other',
+      path: 'other-loan',
       image: 'rocket-ship',
       created: new Date(),
       lastModified: new Date()
