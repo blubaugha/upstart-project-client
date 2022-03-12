@@ -41,8 +41,9 @@ $padding-horizontal: 16px;
   display: grid;
   justify-items: center;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: start;
+  align-content: start;
+  padding: 32px;
 }
 
 .footer {

@@ -16,6 +16,8 @@ export * from './lib/components/pay-off-credit-cards/pay-off-credit-cards.compon
 export * from './lib/components/other-loan/other-loan.component';
 export * from './lib/components/auto-refinance/auto-refinance.component';
 export * from './lib/components/consolidate-debt/consolidate-debt.component';
+export * from './lib/components/user-form/user-form.component';
+export * from './lib/components/login/login.component';
 
 export * from './lib/models/loan.model';
 

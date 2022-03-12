@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatRippleModule } from '@angular/material/core';
+import { MatOptionModule, MatRippleModule } from '@angular/material/core';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,6 +27,13 @@ import { ConsolidateDebtComponent } from './components/consolidate-debt/consolid
 import { PayOffCreditCardsComponent } from './components/pay-off-credit-cards/pay-off-credit-cards.component';
 import { AutoRefinanceComponent } from './components/auto-refinance/auto-refinance.component';
 import { OtherLoanComponent } from './components/other-loan/other-loan.component';
+import { UserFormComponent } from 'projects/core-lib/src/lib/components/user-form/user-form.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { LoginComponent } from './components/login/login.component';
 
 const svgResolverConfig: SvgIconResolverConfig = {
   baseUrl: 'assets/images'
@@ -44,7 +51,14 @@ const components = [
   ConsolidateDebtComponent,
   PayOffCreditCardsComponent,
   AutoRefinanceComponent,
-  OtherLoanComponent
+  OtherLoanComponent,
+  UserFormComponent,
+  LoginComponent
+];
+
+const angularModules = [
+  FormsModule,
+  ReactiveFormsModule
 ];
 
 const angularMaterialModules = [
@@ -56,7 +70,12 @@ const angularMaterialModules = [
   MatSidenavModule,
   MatToolbarModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatRadioModule,
+  MatFormFieldModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatInputModule
 ];
 
 @NgModule({
@@ -70,9 +89,11 @@ const angularMaterialModules = [
     CommonModule,
     HttpClientModule,
     RouterModule,
+    ...angularModules,
     ...angularMaterialModules
   ],
   exports: [
+    ...angularModules,
     ...angularMaterialModules,
     ...components
   ]
