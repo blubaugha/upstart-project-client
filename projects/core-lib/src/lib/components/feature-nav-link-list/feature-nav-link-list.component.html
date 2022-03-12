@@ -1,6 +1,0 @@
-<mat-nav-list>
-  <a mat-list-item [routerLink]="feature.path" *ngFor="let feature of (features$ | async)">
-    <mat-icon class="md" [svgIcon]="feature.image" matListIcon></mat-icon>
-    <span matLine>{{feature.description}}</span>
-  </a>
-</mat-nav-list>

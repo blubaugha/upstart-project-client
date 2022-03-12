@@ -4,12 +4,13 @@
                ___mode="(isHandset$ | async) ? 'over' : 'side'"
                mode="over"
                __opened="(isHandset$ | async) === false">
-    <ng-container *ngIf="featureSet$ | async as featureSet">
-      <mat-toolbar class="sidenav-toolbar">
-      <upstart-feature-set [type]="featureSet.type"></upstart-feature-set>
-      </mat-toolbar>
-      <upstart-feature-nav-link-list [featureSetId]="featureSet.id"></upstart-feature-nav-link-list>
-    </ng-container>
+    <mat-toolbar class="sidenav-toolbar">
+      <div>
+        <div>What would you like to do?</div>
+        <div class="caption">Checking your rate won't affect your credit score</div>
+      </div>
+    </mat-toolbar>
+    <upstart-loan-nav-link-list></upstart-loan-nav-link-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>

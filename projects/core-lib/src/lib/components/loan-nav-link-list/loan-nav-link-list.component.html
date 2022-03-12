@@ -1,0 +1,6 @@
+<mat-nav-list>
+  <a mat-list-item [routerLink]="loan.path" *ngFor="let loan of (loans$ | async)">
+    <mat-icon class="md" [svgIcon]="loan.image" matListIcon></mat-icon>
+    <span matLine>{{loan.description}}</span>
+  </a>
+</mat-nav-list>

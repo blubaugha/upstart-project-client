@@ -1,6 +1,5 @@
-export interface Feature {
+export interface Loan {
   id: string;
-  setId: string;
   name: string;
   description: string;
   image: string;

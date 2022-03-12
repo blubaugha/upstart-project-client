@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeatureSetComponent } from './feature-set.component';
+import { LoanNavBlockListComponent } from './loan-nav-block-list.component';
 
-describe('FeatureSetComponent', () => {
-  let component: FeatureSetComponent;
-  let fixture: ComponentFixture<FeatureSetComponent>;
+describe('LoanNavBlockListComponent', () => {
+  let component: LoanNavBlockListComponent;
+  let fixture: ComponentFixture<LoanNavBlockListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeatureSetComponent ]
+      declarations: [ LoanNavBlockListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FeatureSetComponent);
+    fixture = TestBed.createComponent(LoanNavBlockListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

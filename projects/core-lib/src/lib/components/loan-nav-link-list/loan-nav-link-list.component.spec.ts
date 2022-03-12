@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeatureNavLinkListComponent } from './feature-nav-link-list.component';
+import { LoanNavLinkListComponent } from './loan-nav-link-list.component';
 
-describe('FeatureNavLinkListComponent', () => {
-  let component: FeatureNavLinkListComponent;
-  let fixture: ComponentFixture<FeatureNavLinkListComponent>;
+describe('LoanNavLinkListComponent', () => {
+  let component: LoanNavLinkListComponent;
+  let fixture: ComponentFixture<LoanNavLinkListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-        declarations: [FeatureNavLinkListComponent]
+        declarations: [LoanNavLinkListComponent]
       })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FeatureNavLinkListComponent);
+    fixture = TestBed.createComponent(LoanNavLinkListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
