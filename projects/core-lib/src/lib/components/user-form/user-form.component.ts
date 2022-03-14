@@ -13,7 +13,7 @@ export class UserFormComponent implements OnChanges {
   public user!: User | null;
 
   @Output()
-  public submit = new EventEmitter<User>();
+  public save = new EventEmitter<User>();
 
   userForm = this.fb.group({
     firstName: [null, Validators.required],
@@ -27,7 +27,7 @@ export class UserFormComponent implements OnChanges {
   }
 
   onSubmit(): void {
-    this.submit.emit(this.userForm.value);
+    this.save.emit(this.userForm.value);
   }
 
   updateForm(user: User): void {

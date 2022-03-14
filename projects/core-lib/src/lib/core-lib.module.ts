@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatOptionModule, MatRippleModule } from '@angular/material/core';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppFooterComponent } from './components/app-footer/app-footer.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -42,6 +42,11 @@ import { SERVER_API_CONFIG, ServerApiConfig } from 'projects/core-lib/src/lib/se
 import { UserStatusDialogComponent } from './components/user-status-dialog/user-status-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EditUserFormComponent } from './components/edit-user-form/edit-user-form.component';
+import { GlobalErrorHandler } from 'projects/core-lib/src/lib/error-handlers/global-error-handler';
+import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
+import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
+import { HttpLoadingInterceptor } from 'projects/core-lib/src/lib/http-interceptors/loading-http-interceptor';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const serverApiConfig: ServerApiConfig = {
   baseUrl: 'http://localhost:6140/api/v1'
@@ -68,7 +73,9 @@ const components = [
   UserAddressFormComponent,
   LoginComponent,
   UserStatusDialogComponent,
-  EditUserFormComponent
+  EditUserFormComponent,
+  ErrorDialogComponent,
+  LoadingDialogComponent
 ];
 
 const angularModules = [
@@ -91,7 +98,8 @@ const angularMaterialModules = [
   MatOptionModule,
   MatSelectModule,
   MatInputModule,
-  MatDialogModule
+  MatDialogModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({
@@ -99,6 +107,13 @@ const angularMaterialModules = [
     ...components
   ],
   providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpLoadingInterceptor,
+    multi: true,
+  }, {
+    provide: ErrorHandler,
+    useClass: GlobalErrorHandler
+  }, {
     provide: SERVER_API_CONFIG, useValue: serverApiConfig
   }, {
     provide: SVG_ICON_RESOLVER_CONFIG, useValue: svgResolverConfig

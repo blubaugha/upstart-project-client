@@ -13,7 +13,7 @@ export class UserService {
   constructor(
     private httpClient: HttpClient,
     @Inject(SERVER_API_CONFIG) private serverApiConfig: ServerApiConfig) {
-    this.baseUrl = `${serverApiConfig.baseUrl}/users`;
+    this.baseUrl = `${serverApiConfig.baseUrl}/users/`;
   }
 
   getAll(): Observable<User[]> {
@@ -26,7 +26,7 @@ export class UserService {
 
   save(user: User): Observable<User> {
     if (user.id) {
-      return this.httpClient.put<User>(`${this.baseUrl}/${user.id}`, user);
+      return this.httpClient.put<User>(`${this.baseUrl}${user.id}`, user);
     } else {
       return this.httpClient.post<User>(this.baseUrl, user);
     }

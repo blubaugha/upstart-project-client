@@ -1,6 +1,9 @@
+<div mat-dialog-title>
+  {{userStatus.message}}
+</div>
 <div mat-dialog-content>
-  <p>Saved user <a href="email:{{user.email}}">{{user.email}}</a></p>
+  <p>Saved user <a href="email:{{userStatus.user.email}}">{{userStatus.user.email}}</a></p>
 </div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
-</div>
+<mat-dialog-actions  align="end">
+  <button mat-raised-button mat-dialog-close cdkFocusInitial color="primary">Ok</button>
+</mat-dialog-actions>

@@ -5,6 +5,10 @@ import { UserService } from 'projects/core-lib/src/lib/services/user.service';
 import { Observable } from 'rxjs';
 import { filter, map, takeUntil } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import {
+  UserStatusDialogComponent
+} from 'projects/core-lib/src/lib/components/user-status-dialog/user-status-dialog.component';
 
 @Component({
   selector: 'upstart-edit-user-form',
@@ -14,7 +18,10 @@ import { ActivatedRoute } from '@angular/router';
 export class EditUserFormComponent extends AbstractBaseService implements OnInit {
   public user$!: Observable<User>;
 
-  constructor(private userService: UserService, private activatedRoute: ActivatedRoute) {
+  constructor(
+    private userService: UserService,
+    private activatedRoute: ActivatedRoute,
+    private dialog: MatDialog) {
     super();
     this.listenForEmailQueryParamChange();
   }
@@ -23,7 +30,7 @@ export class EditUserFormComponent extends AbstractBaseService implements OnInit
   }
 
   listenForEmailQueryParamChange(): void {
-    this.activatedRoute.params
+    this.activatedRoute.queryParams
       .pipe(
         filter(params => params.email),
         map(params => params.email),
@@ -36,6 +43,16 @@ export class EditUserFormComponent extends AbstractBaseService implements OnInit
   }
 
   onSubmit(user: User): void {
-    this.userService.save(user).subscribe();
+    this.userService.save(user)
+      .subscribe(user => this.showDialog(user));
+  }
+
+  showDialog(user: User): void {
+    this.dialog.open(UserStatusDialogComponent, {
+      data: {
+        message: 'Good Job!',
+        user
+      }
+    });
   }
 }
