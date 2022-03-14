@@ -18,6 +18,8 @@ export * from './lib/components/auto-refinance/auto-refinance.component';
 export * from './lib/components/consolidate-debt/consolidate-debt.component';
 export * from './lib/components/user-form/user-form.component';
 export * from './lib/components/user-address-form/user-address-form.component';
+export * from './lib/components/user-status-dialog/user-status-dialog.component';
+export * from './lib/components/edit-user-form/edit-user-form.component';
 export * from './lib/components/login/login.component';
 
 export * from './lib/models/loan.model';

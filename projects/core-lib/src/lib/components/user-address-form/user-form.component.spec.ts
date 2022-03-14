@@ -9,7 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { UserAddressFormComponent } from 'projects/core-lib/src/lib/components/user-address-form/user-address-form.component';
 
-describe('UserFormComponent', () => {
+describe('UserAddressFormComponent', () => {
   let component: UserAddressFormComponent;
   let fixture: ComponentFixture<UserAddressFormComponent>;
 

@@ -38,6 +38,14 @@ import { UserService } from 'projects/core-lib/src/lib/services/user.service';
 import {
   UserAddressFormComponent
 } from 'projects/core-lib/src/lib/components/user-address-form/user-address-form.component';
+import { SERVER_API_CONFIG, ServerApiConfig } from 'projects/core-lib/src/lib/services/server-api-config';
+import { UserStatusDialogComponent } from './components/user-status-dialog/user-status-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { EditUserFormComponent } from './components/edit-user-form/edit-user-form.component';
+
+const serverApiConfig: ServerApiConfig = {
+  baseUrl: 'http://localhost:6140/api/v1'
+};
 
 const svgResolverConfig: SvgIconResolverConfig = {
   baseUrl: 'assets/images'
@@ -58,7 +66,9 @@ const components = [
   OtherLoanComponent,
   UserFormComponent,
   UserAddressFormComponent,
-  LoginComponent
+  LoginComponent,
+  UserStatusDialogComponent,
+  EditUserFormComponent
 ];
 
 const angularModules = [
@@ -80,7 +90,8 @@ const angularMaterialModules = [
   MatFormFieldModule,
   MatOptionModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatDialogModule
 ];
 
 @NgModule({
@@ -88,6 +99,8 @@ const angularMaterialModules = [
     ...components
   ],
   providers: [{
+    provide: SERVER_API_CONFIG, useValue: serverApiConfig
+  }, {
     provide: SVG_ICON_RESOLVER_CONFIG, useValue: svgResolverConfig
   }, loanRouteLoaderProvider],
   imports: [

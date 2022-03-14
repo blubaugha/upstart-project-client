@@ -2,8 +2,23 @@
   width: 100%;
 }
 
-.shipping-card {
-  min-width: 120px;
+.user-card {
+  min-width: 128px;
+  padding: 20px;
+}
+
+.user-card-header {
+  display: flex;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.user-card-title {
+
+}
+
+.user-card-image {
+  margin-left: -20px;
 }
 
 .mat-radio-button {
@@ -14,13 +29,14 @@
 .row {
   display: flex;
   flex-direction: row;
+  column-gap: 24px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .col {
   flex: 1;
-  margin-right: 20px;
-}
-
-.col:last-child {
-  margin-right: 0;
 }

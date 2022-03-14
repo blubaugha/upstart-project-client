@@ -14,26 +14,6 @@ $mat-icon-size-xl: 96px !default;
 // Wrap in selector to ensure higher specificity for overrides
 body {
   .mat-icon {
-    &.sm {
-      height: $mat-icon-size-sm !important;
-      width: $mat-icon-size-sm !important;;
-    }
-
-    &.md {
-      height: $mat-icon-size-md !important;;
-      width: $mat-icon-size-md !important;;
-    }
-
-    &.lg {
-      height: $mat-icon-size-lg !important;;
-      width: $mat-icon-size-lg !important;;
-    }
-
-    &.xl {
-      height: $mat-icon-size-xl !important;;
-      width: $mat-icon-size-xl !important;;
-    }
-
     & > svg {
       // Fix extra white space caused by display inline by default for svg elements
       display: block;

@@ -3,9 +3,42 @@ $background-config: map-get($color-config, background);
 
 // Wrap in selector to ensure higher specificity for overrides
 body {
+  .mat-icon {
+    &.sm {
+      height: $mat-icon-size-sm !important;
+      width: $mat-icon-size-sm !important;
+      font-size: $mat-icon-size-sm !important;
+    }
+
+    &.md {
+      height: $mat-icon-size-md !important;
+      width: $mat-icon-size-md !important;
+      font-size: $mat-icon-size-md !important;
+    }
+
+    &.lg {
+      height: $mat-icon-size-lg !important;
+      width: $mat-icon-size-lg !important;
+      font-size: $mat-icon-size-lg !important;
+    }
+
+    &.xl {
+      height: $mat-icon-size-xl !important;
+      width: $mat-icon-size-xl !important;
+      font-size: $mat-icon-size-xl !important;
+    }
+  }
+
   .mat-list-base {
     &.mat-list-inline {
       display: flex;
+    }
+
+    .mat-list-item:hover {
+      .mat-list-icon,
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     &[dense] .mat-list-item .mat-list-item-content {
