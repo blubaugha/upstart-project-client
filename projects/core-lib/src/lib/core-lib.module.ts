@@ -34,6 +34,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { LoginComponent } from './components/login/login.component';
+import { UserService } from 'projects/core-lib/src/lib/services/user.service';
+import {
+  UserAddressFormComponent
+} from 'projects/core-lib/src/lib/components/user-address-form/user-address-form.component';
 
 const svgResolverConfig: SvgIconResolverConfig = {
   baseUrl: 'assets/images'
@@ -53,6 +57,7 @@ const components = [
   AutoRefinanceComponent,
   OtherLoanComponent,
   UserFormComponent,
+  UserAddressFormComponent,
   LoginComponent
 ];
 
@@ -101,6 +106,7 @@ const angularMaterialModules = [
 export class CoreLibModule {
   constructor(
     private svgIconResolverService: SvgIconResolverService,
+    private userService: UserService,
     private loanService: LoanService) {
   }
 }
