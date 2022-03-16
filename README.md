@@ -1,2 +1,1 @@
-# upstart-project-client
-Upstart Project (Angular Client)
+# Upstart Project (Angular Client)
